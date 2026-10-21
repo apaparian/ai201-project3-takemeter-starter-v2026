@@ -228,11 +228,15 @@ AI suggested labels for much of the dataset. I skimmed through them and correcte
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
+I expect the trained model to outperform the baseline at distinguishing analysis from hot_take. Those labels depend on specific patterns from the taxonomy. The baseline only has the label definitions and no examples of how they were used.
+
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
+Analysis received an F1 score of zero in the trained model. That means that model learned how to classify hot_take and reaction, but it failed to understand the analysis boundary. Somehow the untrained model worked the other way around, and failed to understand hot_take or reaction.
 
+This may be somewhat expected, as analyses are difficult to discern in a community that integrates subjective language with evidence and statistics. A general model may recognize evidence-based arguments more easily from the written definitions alone, while the fine-tuned model may have learned stronger patterns for hot_take and reaction from the training examples and begun classifying many borderline analysis posts into those categories instead.
 
 
 ---
