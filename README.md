@@ -163,16 +163,20 @@ I labeled the first 20 posts, as cold, in the note column. After that, I used AI
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
 **Base model:**
+distilbert-base-uncased
 
 **Settings:** <!-- epochs, learning rate, batch size, seed -->
+3 epochs, learning rate 2e-5, batch size 16, seed 42.
+Device: mps (Apple Silicon GPU), torch 2.14.1.
 
 **Anything I changed from the defaults, and why:**
+Nothing. I used the notebook's default settings unchanged.
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
-
-
+     split. If a label had fewer than about 8 in test, say so — it explains a lot
+     of next unit's variance. -->
+Train 139, validation 31, test 30 (70/15/15 stratified split of 200 posts).
+Test label counts: analysis 9, hot_take 11, reaction 10.
 
 ---
 
