@@ -54,38 +54,44 @@
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `analysis`
 
 **Definition:**
 Analysis: Makes an argument backed by a specific, checkable fact that carries the argument.
 
 **Example 1:**
->
+> **Shannel technically placed 4th on three different seasons!**
+We all know that Jujubee was technically 3rd on four different seasons: S2 - 3rd, AS1 - 3rd/4th, AS5 - 2nd/3rd, UKvW1 - 3rd/4th. But Shannel was technically 4th on three different seasons: S1 - 4th, AS1 - 3rd/4th, AS9 - 4th/8th …
 
 **Example 2:**
->
+> **Currently rewatching S5 and damn Alyssa Edwards did so much worse than i remembered.**
+4 weeks in a row in the bottom, which would have been 5 if not for her immunity. Also her being only low for the singing challenge is wild insofar that we never see her sing a single line …
 
-### `label_two`
+### `hot_take`
 
 **Definition:**
 Hot Take: A confident general claim with no support offered, even if it mentions a number.
 
 **Example 1:**
->
+> **Pit Crew.**
+WoW, I really think it’s time to get a variety of body representation in the Pit Crew. The Pit Crew has consistently been made of chiseled, strong, muscular men … But after 18 seasons of US DR, 11 All Stars, plus the many others such as UK, Canada and Down Under I truly feel like now the time we need some consistent Pit Crew members that have a variety of body types. We need a bear! …
 
 **Example 2:**
->
+> **The show should retire songs like they do hockey jerseys.**
+There are particular lip syncs that are so iconic that I'm surprised the show will decide to reuse the songs. Most recently with Macarthur Park - cannot imagine another queen taking a stab at that song after seeing Manila's interpretation. Among other songs that would probably benefit from being retired: Boss Bitch, This will be, Shut up and drive, So emotional …
 
-### `label_three`
+### `reaction`
 
 **Definition:**
 Reaction: An immediate personal response to something that just happened. Feeling rather than argument.
 
 **Example 1:**
->
+> **Never cried at a lip sync til now.**
+Just watching AS11 for the first time and Kennedy + A’keria lip sync … This moment made me 🥲 because it’s as if you see a switch flip in A’keria’s mind where she realizes the weight of the situation and somehow digs deeper … and she’s so so beautiful …
 
 **Example 2:**
->
+> **Kandy Muse in the "I'm Not Perfect" lip-sync is so incredibly c*nt, I can't get over it.**
+On top of this song being an underrated bop of Grace Jones, Kandy just has so much cuntensity throughout. She had me right from the beginning when she isolated her movements with "I'm" on the beat … I love her articulation and I love …
 
 ### The hardest boundary
 
