@@ -187,17 +187,19 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* Asked AI to stress-test the taxonomy and find posts that sat between analysis and hot_take.
+- *What came back:* It generated borderline examples.
+- *What I changed:* I used them to refine the decision rule.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* Asked AI to batch-suggest labels for collected posts.
+- *What came back:* It returned labels based on my definitions.
+- *What I changed:* I skimmed through the labels and corrected a few that were noticeable mis-categorized.
 
 **Pre-labelling disclosure:**
+
+AI suggested labels for much of the dataset. I skimmed through them and corrected some that were clearly mis-categorized, but I did not review every label closely.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
