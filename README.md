@@ -57,6 +57,7 @@
 ### `label_one`
 
 **Definition:**
+Analysis: Makes an argument backed by a specific, checkable fact that carries the argument.
 
 **Example 1:**
 >
@@ -67,6 +68,18 @@
 ### `label_two`
 
 **Definition:**
+Hot Take: A confident general claim with no support offered, even if it mentions a number.
+
+**Example 1:**
+>
+
+**Example 2:**
+>
+
+### `label_three`
+
+**Definition:**
+Reaction: An immediate personal response to something that just happened. Feeling rather than argument.
 
 **Example 1:**
 >
@@ -77,11 +90,12 @@
 ### The hardest boundary
 
 **Which two labels:**
+Analysis vs Hot Take
 
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
-
+If the post names a specific checkable fact, it's 'analysis'.
 
 
 ---
