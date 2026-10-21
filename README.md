@@ -219,10 +219,11 @@ AI suggested labels for much of the dataset. I skimmed through them and correcte
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.233 | 0.500 | +0.267 |
+| Macro F1 | 0.126 | 0.399 | +0.273 |
+| F1 — `analysis` | 0.378 | 0.000 | -0.378 |
+| F1 — `hot_take` | 0.000 | 0.571 | +0.571 |
+| F1 — `reaction` | 0.000 | 0.625 | +0.625 |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
