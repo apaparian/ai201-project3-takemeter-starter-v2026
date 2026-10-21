@@ -42,7 +42,11 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
+TakeMeter takes posts from r/rupaulsdragrace and sorts them into three labels: analysis, hot_take, and reaction. The goal is to see whether a model can learn the difference between someone making an argument, expressing a strong opinion, or simply reacting to something that happened.
 
+I wanted to choose something representative of an LGBTQ+ community, and I did take the instructor's note about communities centered around a single show into account. Ultimately, I felt that discussion around Drag Race is closer to a sport or competition than a traditional television fandom. The community spends a lot of time debating performances, judging decisions, rankings, predictions, and contestant outcomes.
+
+The discussions naturally fit the distinction between analysis, hot takes, and reactions that we covered in lecture. Because of that, it felt like a good place to study different styles of opinion rather than a community focused primarily on spoilers or plot discussion.
 
 ---
 
