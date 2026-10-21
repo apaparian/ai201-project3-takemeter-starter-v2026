@@ -111,18 +111,20 @@ If the post gives reasons, examples, statistics, challenge results, quotes, or o
      cases. -->
 
 **Where the posts came from:**
+r/rupaulsdragrace. I collected public Reddit posts discussing the Drag Race franchise, including episode reactions, judging decisions, contestants, and fandom discussions.
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+     Say so plainly — the disclosure is required, not penalised. -->
+I labeled the first 20 posts, as cold, in the note column. After that, I used AI to suggest labels in batches and then reviewed and corrected them by hand before adding them to the dataset.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| analysis | 59 | 29.5% |
+| hot_take | 72 | 36.0% |
+| reaction | 69 | 34.5% |
+| **Total** | 200 | 100% |
 
 **Three hard cases**
 
@@ -130,25 +132,25 @@ Say so plainly — the disclosure is required, not penalised. -->
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
+> *The post:* "Why do people hate Mistress so much?"
 >
-> *Could have been:*
+> *Could have been:* analysis or hot_take
 >
-> *I chose, because:*
+> *I chose, because:* The post gives reasons and examples to support its position rather than only stating an opinion. I labeled it as analysis.
 
 **2.**
-> *The post:*
+> *The post:* "I see Plane as a troll rather than a mean girl."
 >
-> *Could have been:*
+> *Could have been:* analysis or hot_take
 >
-> *I chose, because:*
+> *I chose, because:* The post explains its reasoning and provides supporting examples from the show. I labeled it as analysis rather than a hot take.
 
 **3.**
-> *The post:*
+> *The post:* "The real winner of DU vs TW."
 >
-> *Could have been:*
+> *Could have been:* hot_take or reaction
 >
-> *I chose, because:*
+> *I chose, because:* The post was mostly an opinion about a contestant rather than an emotional reaction to an event. I labeled it as hot_take.
 
 ---
 
