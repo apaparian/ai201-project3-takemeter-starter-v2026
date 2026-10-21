@@ -101,8 +101,7 @@ Analysis vs Hot Take
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
-If the post names a specific checkable fact, it's 'analysis'.
-
+If the post gives reasons, examples, statistics, challenge results, quotes, or other evidence to support its conclusion, label it analysis. If it mainly states a conclusion or opinion and expects the reader to agree without support, label it hot_take.
 
 ---
 
