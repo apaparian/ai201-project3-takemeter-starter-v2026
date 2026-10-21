@@ -199,7 +199,7 @@ of next unit's variance. -->
 
 **Pre-labelling disclosure:**
 
-AI suggested labels for much of the dataset. I skimmed through them and corrected some that were clearly mis-categorized, but I did not review every label closely.
+AI suggested labels for much of the dataset. I skimmed through them and corrected some that were clearly mis-categorized.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
