@@ -55,11 +55,11 @@ whether you hit them:
 
 <!-- Your criterion. It must name a number. -->
 
-
+The trained model reaches at least 65% accuracy on the held-out test set across all three seeds.
 
 **Why this target:**
 
-
+A random guess across three labels would be roughly 33% accurate. I would consider 65% accurate enough to be useful while still being realistic for a dataset of 200 manually labeled posts.
 
 ---
 
@@ -67,11 +67,11 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
-
+Each label achieves an F1 score of at least 0.55 on the held-out test set across all three seeds.
 
 **Why this target:**
 
-
+Overall accuracy can hide a weak label. I want all three labels to be usable, even if some are naturally harder to distinguish than others.
 
 ---
 
@@ -79,11 +79,11 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
-
+No label accounts for more than 45% of the dataset or less than 25% of the dataset.
 
 **Why this target:**
 
-
+I chose these limits because I wanted all three labels to be represented consistently. A label that appears too often can dominate training, while a label that appears too rarely may not have enough examples for the model to learn from.
 
 ---
 
@@ -91,11 +91,11 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
-
+On the 30-post agreement set, I agree with the staff labels at least 70% of the time.
 
 **Why this target:**
 
-
+The model can only learn consistently if the labeling process is consistent. If I cannot agree with another annotator most of the time, the taxonomy is probably too vague.
 
 ---
 
@@ -103,11 +103,11 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
-
+Predictions made with 80% confidence or higher are correct at least 75% of the time.
 
 **Why this target:**
 
-
+A model's confidence should mean something. If it is highly confident and still frequently wrong, the confidence scores are not useful for deciding when to trust a prediction.
 
 ---
 
