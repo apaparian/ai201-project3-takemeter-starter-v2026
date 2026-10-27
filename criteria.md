@@ -109,6 +109,10 @@ Predictions made with 80% confidence or higher are correct at least 75% of the t
 
 A model's confidence should mean something. If it is highly confident and still frequently wrong, the confidence scores are not useful for deciding when to trust a prediction.
 
+Revised: In every seed, the model's most-confident third of predictions is correct at least 75% of the time.
+
+Why: The original named an 80% confidence cutoff, but the results only record accuracy for the most- and least-confident thirds of predictions. I couldn't produce a verdict.
+
 ---
 
 <!-- ─────────────────────────────────────────────────────────────────────────

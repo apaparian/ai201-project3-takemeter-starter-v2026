@@ -248,11 +248,11 @@ This may be somewhat expected, as analyses are difficult to discern in a communi
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | at least 0.65 on every seed | 0.500 | 0.500 | 0.433 | MISSED |
+| 2. Per-label F1 | at least 0.55 for every label on every seed | 0.000 | 0.200 | 0.000 | MISSED |
+| 3. Label balance | no label above 45% or below 25% of the dataset | 36.0 34.5 29.5 | 36.0 34.5 29.5 | 36.0 34.5 29.5 | MET 
+| 4. Agreement with staff | at least 70% on the 30-post set | 30 | 30 | 30 | MET |
+| 5. Confidence (revised) | most-confident third correct at least 75% on every seed | 0.800 | 0.600 | 0.600 | MISSED |
 
 **Spread across three seeds** (seeds 42, 7, 2024; device `mps`):
 
@@ -264,7 +264,7 @@ This may be somewhat expected, as analyses are difficult to discern in a communi
 | F1 — `hot_take` | 0.571 | 0.595 | 0.462 | 0.133 |
 | F1 — `reaction` | 0.625 | 0.462 | 0.560 | 0.163 |
 
-Accuracy moved 0.67 across seeds. Criterion within that band cannot be called either way.
+Accuracy moved 0.067 across seeds. Criterion within that band cannot be called either way.
 
 ### Confusion matrix
 
@@ -294,11 +294,11 @@ Accuracy moved 0.67 across seeds. Criterion within that band cannot be called ei
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall accuracy | at least 0.65 | MISSED | 0.500, 0.500 and 0.433, so it missed the target on every seed. |
+| 2 | Per-label F1 | at least 0.55 for every label | MISSED | `analysis` had an F1 of 0.000, 0.200 and 0.000, far below 0.55 on every seed. |
+| 3 | Label balance | no label above 45% or below 25% | MET | The labels are 36.0%, 34.5% and 29.5% of the 200 posts. |
+| 4 | Agreement with staff | at least 70% on the 30-post set | MET | I matched the staff label on all 30 posts (100%), including the 7 posts staff flagged as borderline. |
+| 5 | Confidence (revised) | most-confident third correct at least 75% | MISSED | The most-confident third was right 0.800, 0.600 and 0.600 of the time, so it fell below 75% on two of the three seeds. |
 
 **Diagnoses**
 
@@ -310,6 +310,14 @@ Accuracy moved 0.67 across seeds. Criterion within that band cannot be called ei
      ⚠️ Use your agreement report as evidence. It is the only instrument you
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
+
+Criterion 1 (accuracy at least 0.65): Accuracy missed on all three seeds at 0.500, 0.500 and 0.433. The confusion matrix helps explain why. Nine analysis posts were classified as hot_take, and none were misclassified in the opposite direction. Since analysis makes up roughly a third of the test set, those mistakes alone put a substantial cap on the overall accuracy. The direction of the confusion was not surprising. In this community, factual discussions are often wrapped in highly emotional or opinionated language, so posts that are making evidence-based arguments can still look like reactions or strong opinions at a surface level.
+
+
+Criterion 2 (every label F1 at least 0.55): analysis had an F1 of 0.000, 0.200 and 0.000 across the three seeds. The model rarely predicted analysis and instead tended to label those posts as hot_take. My agreement check does not point to a problem in how I apply the analysis / hot_take boundary, since I matched staff on all 30 posts, including the 7 borderline cases. My best guess is either that there are too few analysis examples for the model to learn the distinction reliably, or that the distinction itself is difficult to learn from a dataset of this size. The agreement exercise used the staff taxonomy rather than my own, so it cannot completely rule out inconsistencies in my 200 labeled posts.
+
+
+Criterion 5 (confidence): the most-confident third of predictions was correct 0.800, 0.600 and 0.600 of the time, so the target only held on one seed. Average confidence was about 0.37, which is close to the one-in-three confidence you would expect from guessing between three labels. Each confidence bucket contained only 10 posts, so the numbers are somewhat noisy. My interpretation is the same as above: the model never learned a strong enough signal to become consistently confident in its predictions.
 
 
 
@@ -323,7 +331,7 @@ Accuracy moved 0.67 across seeds. Criterion within that band cannot be called ei
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 30 / 30 = 100%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -345,6 +353,8 @@ Accuracy moved 0.67 across seeds. Criterion within that band cannot be called ei
      written rule two different ways on 30 posts, that is direct evidence about
      what you did across your own 200. -->
 
+None. I matched the staff label on all 30 posts, so there are no disagreements to adjudicate.
+
 **1.**
 > *The post:*
 >
@@ -365,6 +375,7 @@ Accuracy moved 0.67 across seeds. Criterion within that band cannot be called ei
 
 **What the pattern in my disagreements tells me:**
 
+There were no disagreements, so there is no pattern to read. I matched staff on all 30 posts, including all 7 that staff marked as borderline, which shows I can apply a `analysis` / `hot_take` / `reaction` taxonomy. It doesn't necessarily show my own 200 labels were consistent, because my rules were written slightly differently. The easy 10 / 10 / 10 split may have aided in the labeling.
 
 
 ---
