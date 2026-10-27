@@ -254,21 +254,34 @@ This may be somewhat expected, as analyses are difficult to discern in a communi
 | 4.  |  |  |  |  |  |
 | 5.  |  |  |  |  |  |
 
+**Spread across three seeds** (seeds 42, 7, 2024; device `mps`):
+
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.500 | 0.500 | 0.433 | 0.067 |
+| Macro F1 | 0.399 | 0.419 | 0.341 | 0.078 |
+| F1 — `analysis` | 0.000 | 0.200 | 0.000 | 0.200 |
+| F1 — `hot_take` | 0.571 | 0.595 | 0.462 | 0.133 |
+| F1 — `reaction` | 0.625 | 0.462 | 0.560 | 0.163 |
+
+Accuracy moved 0.67 across seeds. Criterion within that band cannot be called either way.
+
 ### Confusion matrix
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
+| true \ predicted | analysis | hot_take | reaction |
 |---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| **analysis** | 0 | 9 | 0 |
+| **hot_take** | 0 | 10 | 1 |
+| **reaction** | 0 | 5 | 5 |
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
+9 posts, that were analysis, were labeled as hot_take. This was expected. The boundary was anaylsis/ hot_take, the direction was towards hot_take. 0 posts were labeled in the opposite direcction. This is considered a labeling mistake by the notebook, but it could also be inherent to the style of discourse present within the community, where words that appear emotionally driven serve as slang representations of factual discussion.
 
 
 
