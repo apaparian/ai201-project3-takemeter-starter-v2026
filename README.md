@@ -383,25 +383,25 @@ There were no disagreements, so there is no pattern to read. I matched staff on 
 ## The Improvement
 
 **What I changed:**
+I revisited the analysis / hot_take boundary and relabeled 8 posts. Each one contained evidence, examples, challenge results, counts, or other supporting facts that met my written definition of analysis, despite originally being labeled hot_take.
 
 **Which diagnosis pointed at it:**
+Criteria 1 and 2. analysis had an F1 of 0.000, 0.200 and 0.000, and the model almost always labeled those posts as hot_take. Since my agreement check was 30/30, I looked instead at whether I had applied my own analysis definition consistently across the 200-post dataset.
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | at least 0.65 on every seed | 0.500 | 0.667 | 0.533 | MISSED |
+| 2. Per-label F1 | at least 0.55 for every label on every seed | 0.17 | 0.57 | 0.35 | MISSED |
+| 3. Label balance | no label above 45% or below 25% of the dataset | 33.5 32.0 34.5 | 33.5 32.0 34.5 | 33.5 32.0 34.5 | MET |
+| 4. Agreement with staff | at least 70% on the 30-post set | 30 | 30 | 30 | MET |
+| 5. Confidence (revised) | most-confident third correct at least 75% on every seed | 0.700 | 0.900 | 0.700 | MISSED |
 
 **Did it help, and how do I know:**
+Partly. The model began identifying analysis posts. Analysis F1 improved from 0.000 / 0.200 / 0.000 to 0.609 / 0.667 / 0.353, and overall accuracy improved from 0.500 / 0.500 / 0.433 to 0.500 / 0.667 / 0.533.
 
-<!-- If it didn't, say so. Relabelling that didn't help is a genuinely
-     interesting result and earns full credit. -->
-
-
+None of the missed criteria became MET. Accuracy still only exceeded 0.65 on one seed, and hot_take became harder for the model. The dataset is still sensitive to the train/test split, and 8 relabeled posts is a relatively small change. What I can say is that the model's behavior changed in the direction the diagnosis predicted: it stopped treating almost every analysis post as a hot_take.
 
 ---
 
@@ -409,12 +409,17 @@ There were no disagreements, so there is no pattern to read. I matched staff on 
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
+Criterion 1 (accuracy at least 0.65): still missed. It did reach the target on one seed after the fix. I would collect more labeled posts, especially analysis and hot_take, since the model only trains on about 140 posts. I stopped because the assignment calls for one change, and with a 30-post test set it is difficult to tell how much of the improvement came from the relabeling alone.
+
+Criterion 2 (every label F1 at least 0.55): still missed. analysis improved, but hot_take fell to 0.17 on seed 42 and analysis was still only 0.35 on seed 2024. I would revisit the analysis / hot_take boundary across the entire dataset and collect more examples for both labels. I stopped because that would introduce multiple changes at once, making it difficult to determine which change actually helped.
+
+Criterion 5 (most-confident third at least 75%): still missed. It did meet the target on one seed, and the other two were close. I would increase the size of the dataset and test split before drawing stronger conclusions from this metric. I stopped because expanding the dataset would be a separate change from the relabeling improvement.
 
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
-
+My labels were intended to separate evidence-based arguments from unsupported opinions, but the model struggled to learn that distinction. The confusion matrix showed that analysis posts were repeatedly classified as hot_take, suggesting that evidence and opinion are often expressed in a similar tone within this community.
 
 
 <!-- ═════════════════════════════════════════════════════════════════════
