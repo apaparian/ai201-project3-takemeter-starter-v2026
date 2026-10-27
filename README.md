@@ -205,6 +205,12 @@ Test label counts: analysis 9, hot_take 11, reaction 10.
 
 AI suggested labels for much of the dataset. I skimmed through them and corrected some that were clearly mis-categorized.
 
+**Unit 6: Moment 3**
+
+- *What I asked for:* Asked AI to review my confusion matrix, criteria results, and diagnosis after training.
+- *What came back:* It pointed out that the largest confusion was analysis posts being classified as hot_take, and suggested reviewing that boundary before changing any training settings.
+- *What I changed:* I reviewed the analysis / hot_take boundary and relabeled 8 posts that did not consistently follow my written decision rule before retraining.
+
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
      Don't fill these in during unit 5.
@@ -421,6 +427,14 @@ learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
 My labels were intended to separate evidence-based arguments from unsupported opinions, but the model struggled to learn that distinction. The confusion matrix showed that analysis posts were repeatedly classified as hot_take, suggesting that evidence and opinion are often expressed in a similar tone within this community.
 
+
+## How I Used AI
+
+**Moment 3**
+
+- *What I asked for:* Asked AI to review my confusion matrix, criteria results, and diagnosis after training.
+- *What came back:* It pointed out that the largest confusion was analysis posts being classified as hot_take, and suggested reviewing that boundary before changing any training settings.
+- *What I changed:* I reviewed the analysis / hot_take boundary and relabeled 8 posts that did not consistently follow my written decision rule before retraining.
 
 <!-- ═════════════════════════════════════════════════════════════════════
 
